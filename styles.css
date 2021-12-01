@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+    line-height: 1.5;
+}
+
+.container {
+    display: grid;
+    grid-template: "header header header" 100px "left-menu main right-menu" 1fr / 300px 1fr 300px;
+    height: 100vh;
+}
+
+.header {
+    grid-area: header;
+    background-color: #800000;
+}
+
+.left-menu {
+    grid-area: left-menu;
+    background-color: white;
+}
+
+.main {
+    grid-area: main;
+    background-color: white;
+    display: grid;
+    grid-template-rows: 70px 1fr 1fr 1fr 70px 1fr;
+    padding: 10px;
+    gap: 20px;
+}
+
+.right-menu {
+    grid-area: right-menu;
+    background-color: white;
+}
+
+.header .quote {
+    padding: 15px;
+    color: white;
+}
+
+.main .wilde,
+.main .seuss,
+.main .rowling {
+    background-color: #8fbc8f;
+}
+
+.main .selfish {
+    background-color: skyblue;
+}
+
+h2 {
+    padding: 20px;
+    font-weight: heavy;
+    font-size: 35px;
+}
+
+.container .wilde,
+.container .seuss,
+.container .rowling {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.wilde .text-1,
+.wilde .reference-1 .seuss .text2,
+.seuss .reference2,
+.rowling .text3,
+.rowling .reference3 {}
+
+.text-1,
+.text2,
+.text3 {
+    text-align: center;
+    display: grid;
+    place-items: center;
+}
+
+.reference-1,
+.reference2,
+.reference3,
+.selfish {
+    display: grid;
+    justify-items: right;
+    padding: 15px;
+    font-size: smaller;
+}
+
+.main .wilde,
+.main .seuss,
+.main .rowling,
+.main .selfish {
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.big {
+    font-size: larger;
+}
+
+.main .selfish {
+    display: grid;
+    place-content: center;
+    text-align: center;
+}
+
+.text-1 {
+    color: white;
+}
+
+.text2 {
+    color: blue;
+}
+
+.text3 {
+    color: tomato;
+}
+
+.selfish {
+    color: yellow;
+}
